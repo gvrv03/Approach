@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let's go out for a date</title>
+    <title>Will You Be My Girlfriend?</title>
     <style>
         body {
             display: flex;
@@ -17,20 +17,24 @@
             /* Replace with your background image */
             background-size: cover;
             font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ddd;
         }
 
         .popup {
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 30px;
+            background-color: rgba(34, 34, 34, 0.9);
+            padding: 20px;
             border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             animation: fadeIn 1s;
+            width: 80%;
+            max-width: 600px;
         }
 
         .popup p {
             font-size: 24px;
-            color: #333;
+            color: #eee;
             margin-bottom: 20px;
         }
 
@@ -41,7 +45,7 @@
         }
 
         button {
-            padding: 12px 25px;
+            padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
             border: none;
@@ -50,22 +54,22 @@
         }
 
         #yesButton {
-            background-color: #28a745;
-            color: white;
+            background-color: #1f8b4c;
+            color: #fff;
         }
 
         #yesButton:hover {
-            background-color: #218838;
+            background-color: #176f3a;
             transform: scale(1.05);
         }
 
         #noButton {
-            background-color: #dc3545;
-            color: white;
+            background-color: #b0232a;
+            color: #fff;
         }
 
         #noButton:hover {
-            background-color: #c82333;
+            background-color: #8b1c22;
             transform: scale(1.05);
         }
 
@@ -83,8 +87,8 @@
 
         .message {
             display: none;
-            font-size: 20px;
-            color: #555;
+            font-size: 18px;
+            color: #ddd;
             margin-top: 20px;
             animation: slideIn 1s forwards;
         }
@@ -100,12 +104,53 @@
                 transform: translateY(0);
             }
         }
-        .authname{
-            position: fixed;
-            bottom: 30px;
-            font-weight: 500;
-            color: gray;
 
+        .authname {
+            position: fixed;
+            bottom: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #888;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Media queries for responsive font sizes */
+        @media (max-width: 768px) {
+            .popup p {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+
+            .message {
+                font-size: 16px;
+            }
+
+            .authname {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .popup p {
+                font-size: 18px;
+            }
+
+            button {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+
+            .message {
+                font-size: 14px;
+            }
+
+            .authname {
+                font-size: 10px;
+            }
         }
     </style>
 </head>
@@ -114,12 +159,12 @@
     <div class="popup">
         <p>Hey, I really enjoy talking to you and was wondering if you'd like to go out for a coffee ?</p>
         <div class="button-container">
-            <button id="yesButton">Say Yess ! (I'll tell you time and place)</button>
+            <button id="yesButton">Say Yes (i'll tell you time & Place)</button>
             <button id="noButton">NO</button>
         </div>
         <p class="message" id="yesMessage">Yay! Can't wait to spend time together! ❤️</p>
     </div>
-    <div class="authname" >
+    <div class="authname">
         Gaurav 💖 (Not a bad person)
     </div>
 
